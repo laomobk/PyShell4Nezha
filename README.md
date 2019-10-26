@@ -4,7 +4,7 @@
 
 ### How to use?
 1. make sure your default python version 3.6+
-2. run es_script.py
+2. run 'python3 es_script.py'
 3. follow installer
 4. done.
 
