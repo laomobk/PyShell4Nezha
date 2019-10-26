@@ -72,3 +72,4 @@ if __name__ == '__main__':
     cpy_files()
 
     print('done!')
+    print("Enter 'py4nz' to run.")
