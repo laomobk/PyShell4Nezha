@@ -1,0 +1,28 @@
+#!/usr/bin/python
+
+import argparse
+if __name__ == '__main__':
+    import sys
+    
+    if len(sys.argv) > 1:
+        is_color = '-color' in sys.argv
+        is_help  = '-h' in sys.argv
+
+        if is_help:
+            print('''
+usage : py4nz [-h | -color] [file]
+-color      colord shell with Nezha-style color
+-h          show help''')
+        elif is_color:
+            import code4nz
+            code4nz.interact(exitmsg='(记得陪小爷踢毽子哦！)', color=True)
+        else:
+            fn = sys.argv[-1]
+            comp = compile(open(fn).read(), fn, 'exec')
+            
+            exec(comp)
+
+    else:
+        import code4nz
+        code4nz.interact(exitmsg='(记得陪小爷踢毽子哦！)')
+
